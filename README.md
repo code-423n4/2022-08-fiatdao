@@ -57,3 +57,26 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Ends August 15, 2022 20:00 UTC
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
+## Contracts
+[VotingEscrow.sol](./contracts/VotingEscrow.sol) -
+839 sloc -
+External contracts called: ERC20 token contract (LP FDT-ETH)
+
+[Blocklist.sol](./contracts/features/Blocklist.sol) - 
+38 sloc - 
+External contracts called : VotingEscrow.sol
+
+# veFDT
+A solidity implementation of Curve's voting-escrow with additional features outlined below.
+
+**Lock delegation**
+Users may delegate ther lock to another user whereby they give the delegatee control over their lock expiration and balance (i.e. voting power). Both users, the delegator and the delegatee, need to have an active lock in place at the time of delegation. Moreover, the delegatee's lock expiration needs to be longer than the delegator's.
+
+**Lock quitting**
+A non-expired lock may be quitted by the lock owner anytime. The lock cannot be delegated at the time of quitting and the quitter pays a penalty proportional to the remaining lock duration.
+
+**Optimistic SmartWallet approval**
+*SmartWallets* (i.e. contracts) can create a lock without being approved first. However, the veFDT owner maintains a Blocklist where SmartWallets may be blocked from further interacting with the system. The Blocklist only allows the owner to block contracts but not EOAs. Blocked SmartWallets may still undelegate (if delegated prior to the blocking) and quit their lock (by paying the penalty) or withdraw once the lock expired.
+
+## Quickstart
+Guidelines can be found [here](./Guidelines.md).
