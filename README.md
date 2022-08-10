@@ -58,11 +58,11 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
 ## Contracts
-VotingEscrow.sol -
+[VotingEscrow.sol](./contracts/VotingEscrow.sol) -
 839 sloc -
 External contracts called: ERC20 token contract (LP FDT-ETH)
 
-Blocklist.sol - 
+[Blocklist.sol](./contracts/features/Blocklist.sol) - 
 38 sloc - 
 External contracts called : VotingEscrow.sol
 
