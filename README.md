@@ -57,14 +57,14 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Ends August 15, 2022 20:00 UTC
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
-# contracts
-VotingEscrow.sol 
-839 sloc
-External contracts: ERC20 token contract (LP FDT-ETH)
+## Contracts
+VotingEscrow.sol -
+839 sloc -
+External contracts called: ERC20 token contract (LP FDT-ETH)
 
-Blocklist.sol
-38 sloc
-External contracts call : VotingEscrow.sol
+Blocklist.sol - 
+38 sloc - 
+External contracts called : VotingEscrow.sol
 
 # veFDT
 A solidity implementation of Curve's voting-escrow with additional features outlined below.
