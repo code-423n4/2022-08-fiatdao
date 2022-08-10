@@ -47,11 +47,11 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# FIAT DAO contest details
+# FIAT DAO veFDT contest details
 - $33,250 USDC main award pot
 - $1,750 USDC gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2022-08-fiat-dao-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2022-08-fiat-dao-vefdt-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts August 12, 2022 20:00 UTC
 - Ends August 15, 2022 20:00 UTC
