@@ -85,7 +85,7 @@ The veFDT contract implements the same checkpoint mathematics than the original 
 
 ## Scope Q/A
 
-- Do you have a link to the repo that the contest will cover?  https://github.com/fiatdao/veFDT
+- Do you have a link to the repo that the contest will cover?  https://github.com/fiatdao/veFDT (**private repo**)
 - How many (non-library) contracts are in the scope?  5
 - Total sLoC in these contracts?  746
 - How many library dependencies?  1
