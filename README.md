@@ -83,7 +83,7 @@ The veFDT contract implements the same checkpoint mathematics than the original 
 - Curve Finance: Original concept and implementation in Vyper ([Source](https://github.com/curvefi/curve-dao-contracts/blob/master/contracts/VotingEscrow.vy))
 - mStable: Forking Curve's Vyper contract and porting to Solidity including math tests ([Source](https://github.com/mstable/mStable-contracts/blob/master/contracts/governance/IncentivisedVotingLockup.sol)) 
 
-### Scope Q/A
+## Scope Q/A
 
 - Do you have a link to the repo that the contest will cover?  https://github.com/fiatdao/veFDT
 - How many (non-library) contracts are in the scope?  5
