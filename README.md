@@ -12,26 +12,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Contest setup
-
-## ⭐️ Sponsor: Provide contest details
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Add all of the code to this repo that you want reviewed
-
-
----
-
 # Contest prep
 
 ## ⭐️ Sponsor: Contest prep
@@ -56,7 +36,6 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Starts August 12, 2022 20:00 UTC
 - Ends August 15, 2022 20:00 UTC
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
 ## Contracts
 ## Scope
 ### Files in scope
