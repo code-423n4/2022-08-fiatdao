@@ -142,7 +142,7 @@ export ALCHEMY_MAINNET_API_KEY=[ALCHEMY_KEY]
 ```
 
 ## Voting-escrow math
-The veFDT contract implements the same checkpoint mathematics than the original Curve VotingEscrow.vy contract. The new features leverage this math in order to void or redirect (i.e. delegate) a lock's virtual balance. More details about how the various lock operations interact with Curve's checkpoint math can be found [here](./CheckpointMath.md).
+The veFDT contract implements the same checkpoint mathematics than the original Curve VotingEscrow.vy contract. The new features leverage this math in order to void or redirect (i.e. delegate) a lock's virtual balance. More details about how the various lock operations interact with Curve's checkpoint math can be found [here](https://github.com/code-423n4/2022-08-fiatdao/blob/main/CheckpointMath.md).
 
 ## Source
 - Curve Finance: Original concept and implementation in Vyper ([Source](https://github.com/curvefi/curve-dao-contracts/blob/master/contracts/VotingEscrow.vy))
