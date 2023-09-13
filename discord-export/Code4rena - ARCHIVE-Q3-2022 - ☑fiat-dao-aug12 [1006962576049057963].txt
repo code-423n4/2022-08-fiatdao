@@ -1,0 +1,714 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2022 / ☑fiat-dao-aug12
+==============================================================
+
+[08/10/2022 4:57 PM] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $35K USDC **FIAT DAO veFDT** contest!
+
+📆 Contest opens 08/12/2022 8:00 PM (20:00 UTC) and runs through 08/15/2022 8:00 PM (20:00 UTC) (3 days).
+
+Please give a warm welcome to the FIAT DAO team, particularly @banklezz, @maxfiat, @johannes and @tabboz, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-08-fiat-dao-vefdt-contest
+
+{Embed}
+https://code4rena.com/contests/2022-08-fiat-dao-vefdt-contest
+Code4rena FIAT DAO veFDT contest
+$35,000 USDC
+12 August 2022—15 August 2022
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/C4-banner-7C19B.png
+
+
+[08/10/2022 4:59 PM] ilyk#8283
+https://tenor.com/view/let-the-game-begin-jigsaw-saw6-lets-start-the-game-the-game-begin-now-gif-21986582
+
+{Embed}
+https://tenor.com/view/let-the-game-begin-jigsaw-saw6-lets-start-the-game-the-game-begin-now-gif-21986582
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/let-the-game-begin-jigsaw-84F0C.png
+
+{Reactions}
+😱 (4) 🤙 (4) 
+
+[08/12/2022 1:23 PM] maxfiat
+Hey everyone, looking forward to the contest this weekend :pepesalute: 
+
+Our team is spread across time zones but myself and @johannes are also available if you have questions during early hours CET.
+
+{Reactions}
+👋 (8) 
+
+[08/12/2022 8:56 PM] banklezz
+Hey hey everyone we're officially live with the veFDT contest! 
+
+We're v excited to sit back, watch the game and see you guys do your magic. veFDT will be a central piece of an upgrade to the FIAT protocol we're rolling out in stages over the next months. So this initial contest and your work are a critical part of that upgrade. 
+
+We highly appreciate your participation in the contest and stand by should you have any question!
+
+@tabboz and myself are your primary points of contact here but please feel free to also ping @maxfiat or @johannes should we not respond in a timely fashion.
+
+Let the games begin!
+
+{Reactions}
+🔥 (9) ❤️ (4) 
+
+[08/13/2022 11:04 AM] JohnSmith#1623
+Will blocked contracts be able to participate in voting?
+
+
+[08/13/2022 11:16 AM] maxfiat
+We've left that open for now since this doesn't include a gauge mechanism at the moment. It is technically possible to integrate the blocklist modifier with any future voting functions associated with gauges. cc @banklezz correct me I'm wrong though
+
+
+[08/13/2022 11:22 AM] banklezz
+Correct. A future voting/gauge mechanism will fetch voting power from a VotingVault as suggested in Element Finance's Council framework. This vault may void voting power for blocked contracts.
+
+
+[08/13/2022 1:07 PM] illilli000
+would it be possible to make https://github.com/fiatdao/veFDT non-private for the duration of the contest, or somehow provide the deltas of each group of large changes? I'm trying to trace through the changes since https://github.com/mstable/mStable-contracts/blob/master/contracts/governance/IncentivisedVotingLockup.sol and it's using up a bunch of time
+
+
+[08/13/2022 2:15 PM] banklezz
+You wouldn't find the history in the repo as commits have been squashed
+
+
+[08/13/2022 2:18 PM] banklezz
+It's important to note (verify?) That the core math is in `_checkpoint` which we didn't touch apart from checkpointing based on lock's LockedBalance.delegated instead of LockedBalance.amount. then `delegate` and `quitLock` add some additional checkpoints for delegation and quitting actions
+
+{Reactions}
+👍 
+
+[08/13/2022 2:18 PM] banklezz
+Hope that helps
+
+
+[08/13/2022 2:46 PM] 0xmatt#3768
+Hi is anyone from the project around for DM? @banklezz or @maxfiat maybe?
+
+{Reactions}
+🤚 
+
+[08/13/2022 3:00 PM] 0xmatt#3768
+Hi @banklezz I'm having trouble dm'ing you - can you accept my friend request?
+
+
+[08/13/2022 3:20 PM] banklezz
+oh, missed that just did
+
+
+[08/13/2022 11:55 PM] alextheentreprenerd
+Re Voting: Is voting expected to be only onChain or also via snapshot?
+
+{Reactions}
+👍 
+
+[08/14/2022 12:54 AM] maxfiat
+on-chain
+
+{Reactions}
+👍 
+
+[08/14/2022 9:01 AM] 0xmatt#3768
+Having some hardhat typechain dependency conflicts blocking npm compile. Has anyone had this, did they get it working?
+
+
+[08/14/2022 9:04 AM] tabboz
+are you on windows?
+
+
+[08/14/2022 9:04 AM] 0xmatt#3768
+no, linux
+
+{Reactions}
+thankyou 
+
+[08/14/2022 9:04 AM] tabboz
+oh ok, bc someone had that problen with windows but with linux should work
+
+
+[08/14/2022 9:04 AM] 0xmatt#3768
+looks like npm install --legacy-peer-deps fixed it
+
+{Reactions}
+👍 (3) 
+
+[08/14/2022 9:08 AM] elku.cryptos
+I have this error while testing. 
+``` HardhatError: HH110: Invalid JSON-RPC response received: Subdomain not recognized.```
+any idea of the cause?
+
+
+[08/14/2022 9:15 AM] tabboz
+could be due to the url endpoint? did u update it or just added the alchemy key?
+
+
+[08/14/2022 9:16 AM] elku.cryptos
+I saved the alchemy api key in an environmental variable called `ALCHEMY_MAINNET_API_KEY`. not sure what else i needs to do to get it work.
+
+
+[08/14/2022 9:17 AM] illilli000
+did you try the all-in-one command?
+
+
+[08/14/2022 9:20 AM] elku.cryptos
+thanks. I made a mistake in how I exported the key. thanks. now they are running fine.  🙏
+
+{Reactions}
+👍 (3) 
+
+[08/14/2022 1:24 PM] Deleted User
+@banklezz sent you a friend request:)
+
+
+[08/14/2022 1:38 PM] banklezz
+Hello fren 👋
+
+{Reactions}
+👋 
+
+[08/14/2022 2:59 PM] oridabush
+@banklezz can you accept my friend request too please?
+
+{Reactions}
+yessir (2) 
+
+[08/14/2022 5:53 PM] Noah3o6#2496
+i ve found a medium(my first one) and want to submit. There is a # called proof of concept says "Provide direct links to all referenced code in GitHub. Add screenshots, logs, or any other relevant proof that illustrates the concept." what do they mean with links, should i paste findings there? Can someone please help out
+
+
+[08/14/2022 5:56 PM] ch_301
+@Noah3o6  just like this one
+
+
+[08/14/2022 5:56 PM] ch_301
+https://github.com/code-423n4/2022-08-fiatdao/blob/main/contracts/VotingEscrow.sol#L100-L113
+
+
+[08/14/2022 6:18 PM] Noah3o6#2496
+okay than i did it wrong thanks for help
+
+
+[08/15/2022 1:14 AM] masterchief#9196
+@banklezzor @maxfiat dm’d a question/added you when you have a minute, thanks
+
+{Reactions}
+👍 
+
+[08/15/2022 3:08 AM] elku.cryptos
+who is available for dm?
+
+{Reactions}
+🤚 
+
+[08/15/2022 10:51 AM] cryptphi
+it could also be links that would help in understanding the finding. Never hurts to be detailed enough when filling the PoC section in the submission. The goal is to ensure the sponsor and judge has no other reason but to mark your finding as valid 😅
+
+{Reactions}
+✅ 
+
+[08/15/2022 11:05 AM] Noah3o6#2496
+i just pasted the link from a contest before, with the same finding. There is everything explained and also examples, hope this is enough.
+
+
+[08/15/2022 12:25 PM] auditor0517
+@banklezz can you accept my friend request? I want to ask one thing.
+
+{Reactions}
+👍 
+
+[08/15/2022 2:50 PM] CRYP70#8985
+😁
+
+
+[08/15/2022 4:23 PM] banklezz
+Hey everyone, it's been great to see such high participation in the contest over the past 3 days. I want to express the FIAT DAO team's appreciation of all your valuable input as we're entering the last hours of the contest!
+
+
+[08/15/2022 4:24 PM] banklezz
+I might not be able to respond timely during the last hours so please reach out to @tabboz instead. Look forward to your submissions and post contest clean up
+
+{Reactions}
+👷🏻‍♂️ chefskiss (2) 
+
+[08/15/2022 5:31 PM] Franfran#5067
+Why is ` _copyLock()`  used in the delegation contract ? Is that some gas saving ?
+
+
+[08/15/2022 5:54 PM] tabboz
+what do you mean used in the delegation contract? It's used in the VotingEscrow.sol in multiple functions to make a copy of the LockedBalance struct
+
+
+[08/15/2022 5:59 PM] Franfran#5067
+Yeah
+
+
+[08/15/2022 5:59 PM] Franfran#5067
+Why not simple assigning it to a new variable ?
+
+
+[08/15/2022 6:05 PM] tabboz
+got your point, it was bc if we assigned it directly, the 'copied lock' would still point to the old lock so if we then update the old lock it would also update the copied lock, so we initiate a new or copied lock by using the old lock values as default values
+
+
+[08/15/2022 6:11 PM] auditor0517
+@tabboz Can I ask one thing via DM?
+
+{Reactions}
+👍 
+
+[08/15/2022 6:15 PM] JohnSmith#1623
+@Franfran If you have another more efficient way of copying structs, please do share!
+
+
+[08/15/2022 6:36 PM] pedr02b2
+is there please anyone that i can contact with regard to a suspected bug please i just want to check something before i send in a bug report
+
+
+[08/15/2022 6:43 PM] tabboz
+hi you can DM me
+
+
+[08/15/2022 6:45 PM] pedr02b2
+perfect thank you
+
+
+[08/15/2022 8:00 PM] maxfiat
+https://tenor.com/view/independence-day-jeff-goldblum-times-up-over-time-gif-4424448
+
+{Embed}
+https://tenor.com/view/independence-day-jeff-goldblum-times-up-over-time-gif-4424448
+Times up, you took too long - Independence Day
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/independence-day-jeff-goldblum-26D0C.png
+
+
+[08/15/2022 8:01 PM] rokinot
+good contest
+
+
+[08/15/2022 8:02 PM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **FIAT DAO veFDT** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: the **FIAT DAO** team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+C4Keycap (17) 
+
+[08/15/2022 11:47 PM] CRYP70#8985
+Thanks to the devs! What were the stats for fiatdao?
+
+{Reactions}
+👆 (3) 
+
+[08/16/2022 1:22 PM] kartoonjoy
+Pinned a message.
+
+
+[08/29/2022 2:57 PM] Noah3o6#2496
+any updates?
+
+
+[08/29/2022 3:15 PM] Ignacio#9604
+it take like 1 to 2 month
+
+
+[08/29/2022 3:17 PM] Noah3o6#2496
+https://discord.com/channels/810916927919620096/810929015509483554/1011341168900046979
+
+
+[08/29/2022 3:17 PM] Noah3o6#2496
+what does the point ,,on the menu this week means“ then?
+
+
+[08/29/2022 3:23 PM] codingnamekiki
+that is the mason rewards for the thread bounty
+
+{Reactions}
+✅ 
+
+[09/09/2022 3:19 PM] codingnamekiki
+any news on this one? :4739_Skeletor:
+
+{Reactions}
+☝️ 
+
+[09/09/2022 3:26 PM] alextheentreprenerd
+Last day of triage I think, should be done soon
+
+{Reactions}
+chefskiss (6) 
+
+[09/09/2022 3:28 PM] codingnamekiki
+perfect
+
+
+[09/10/2022 2:40 AM] CRYP70#8985
+Woohoo
+
+
+[09/10/2022 6:48 AM] rokinot
+👁️
+
+
+[09/15/2022 4:18 PM] Ignacio#9604
+any update?
+
+
+[09/15/2022 5:21 PM] codingnamekiki
+my spidey-sense tells me it will be soon
+
+
+[09/15/2022 5:21 PM] codingnamekiki
+🤞
+
+
+[09/16/2022 12:08 AM] CRYP70#8985
+I’m quite eager for this one 🤞🤞🤞🤞
+
+
+[09/19/2022 10:17 AM] CRYP70#8985
+How's the triage / judging going? 🙂
+
+
+[09/19/2022 11:50 AM] JohnSmith#1623
+https://tenor.com/view/spiderman-meme-tushar-spooderman-gif-20243671
+
+{Embed}
+https://tenor.com/view/spiderman-meme-tushar-spooderman-gif-20243671
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/spiderman-meme-375B2.png
+
+
+[09/19/2022 11:51 AM] codingnamekiki
+guess it doesn't exist 😭
+
+{Reactions}
+😭 (2) 
+
+[09/20/2022 1:43 PM] natzuu33
+https://tenor.com/view/sad-pablo-lonely-alone-gif-12928789
+
+{Embed}
+https://tenor.com/view/sad-pablo-lonely-alone-gif-12928789
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/sad-pablo-lonely-712AA.png
+
+{Reactions}
+😴 
+
+[09/20/2022 11:28 PM] rokinot
+https://github.com/code-423n4/code423n4.com/pull/4030
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/4030
+Add FIAT to Leaderboard by liveactionllama · Pull Request #4030 · c...
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/4030-227C3
+
+{Reactions}
+👍 
+
+[09/20/2022 11:43 PM] JohnSmith#1623
+score 83, I will never get there...
+
+
+[09/20/2022 11:44 PM] 100proof
+Sure you will! You'll be backstage in a month or two, I'm sure.
+
+
+[09/21/2022 12:56 AM] Waze#6964
+My first high, i can’t imagine
+
+{Reactions}
+🎉 (6) 
+
+[09/21/2022 4:03 AM] CRYP70#8985
+Think my poc got knocked back and I’m not sure why 😟
+
+
+[09/21/2022 4:27 AM] codingnamekiki
+My first high as well
+
+{Reactions}
+🥂 
+
+[09/21/2022 4:27 AM] codingnamekiki
+:hearteyesshark:
+
+
+[09/21/2022 6:28 AM] Noah3o6#2496
+How can I get backstage and what advantages do I get?
+
+
+[09/21/2022 8:24 AM] rvierdiiev
+from the docs to get backstage status you need: "1 high severity finding OR 3 medium severity findings OR score >85 on a QA or Gas report"
+
+only in this contest you found 2 mediums
+so that means that you need only one more
+am i right?
+
+
+[09/21/2022 9:18 AM] karanctf
+what are advantages?
+
+
+[09/21/2022 9:58 AM] rvierdiiev
+idk, honestly, as i'm not there
+
+but here is the doc page
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
++Backstage wardens
+
+
+[09/21/2022 1:35 PM] itsmetechjay
+🤑 🎉 Awards for **FIAT DAO veFDT**:
+
+$12,925.76 USDC » @Respx 
+$4,482.50 USDC » CertoraInc (@egjlmn1, @Ori Dabush, @ItayG, @shakedwinder, @RoiEvenHaim)
+$1,940.99 USDC » @scaraven 
+$1,128.14 USDC » @ak1 
+$733.90 USDC » @jonatascm 
+$625.19 USDC » @thinklab 
+$577.05 USDC » @lucyoa 
+$571.54 USDC » KIntern_NA (@TrungOre, @duc)
+$571.54 USDC » @cryptphi 
+$557.33 USDC » @JohnSmith 
+$541.65 USDC » PwnedNoMore (@izhuer, @ItsNio, @papr1ka2)
+$530.47 USDC » @0x1f8b 
+$512.54 USDC » @csanuragjain 
+$486.06 USDC » @Deleted User 
+$434.82 USDC » @rokinot 
+$394.45 USDC » @CodingNameKiki 
+$391.74 USDC » @zhuXKET 
+$389.99 USDC » @cccz 
+$389.99 USDC » @ayeslick 
+$358.87 USDC » @Noah3o6 
+$358.86 USDC » @Waze 
+$314.02 USDC » @pedr02b2 
+$314.02 USDC » @peritoflores 
+$211.14 USDC » @IllIllI 
+$187.08 USDC » @cRat1st0s 
+$187.01 USDC » @ladboy233小伙子 
+$186.99 USDC » @rvierdiiev 
+$162.49 USDC » @robee 
+$162.41 USDC » @d3e4 
+$157.10 USDC » @carlitox477 
+$142.15 USDC » @joestakey 
+$129.86 USDC » @Dravee 
+$125.97 USDC » @code-cipher 
+$112.04 USDC » @Deivitto 
+$107.67 USDC » @auditor0517 
+$107.62 USDC » @bin2chen 
+$107.61 USDC » wagmi
+
+{Reactions}
+🎉 (4) hi5 (3) 4739_Skeletor 
+
+[09/21/2022 1:35 PM] itsmetechjay
+$77.72 USDC » 0xf15ers (@remora0, @twojoy)
+$77.72 USDC » @tabish.eth 
+$77.72 USDC » @yixxas 
+$68.01 USDC » @DefSec 
+$62.32 USDC » @ajtra 
+$62.31 USDC » @MiloTruck 
+$60.88 USDC » @bobirichman7542 
+$56.78 USDC » @pfapostol 
+$54.49 USDC » @Bnke 
+$54.24 USDC » @0xNazgul 
+$53.57 USDC » @ret2basic.eth 
+$50.12 USDC » @Rolezn 
+$49.89 USDC » @Alex The Entreprenerd 
+$48.33 USDC » @ellahi 
+$47.70 USDC » @gogo 
+$46.36 USDC » @JC
+$46.25 USDC » @ReyAdmirado 
+$46.10 USDC » @c3phas 
+$45.93 USDC » @TomJ 
+$45.73 USDC » @PaludoX0 
+$45.19 USDC » @0xLovesleep 
+$45.07 USDC » @Django | Saloon Finance 
+$45.06 USDC » @Deleted User 
+$45.03 USDC » @RedOneN 
+$45.02 USDC » @ElKu 
+$45.01 USDC » @Junnon 
+$45.01 USDC » @sikorico 
+$44.89 USDC » @__141345__ 
+$44.86 USDC » mics
+$44.86 USDC » @durianSausage 
+$44.85 USDC » @brgltd 
+$44.85 USDC » @Funen 
+$44.85 USDC » @rbserver 
+$44.84 USDC » @simon135 
+$44.84 USDC » LeoS
+$44.84 USDC » @EricTee 
+$44.84 USDC » @medikko 
+$44.84 USDC » @Sm4rty 
+$44.84 USDC » @apostle0x01 
+$44.84 USDC » @Chom 
+$44.84 USDC » @0xNineDec 
+$44.84 USDC » @delfin454000 
+$44.84 USDC » @a12jmx 
+$44.84 USDC » 0xbepresent
+$44.84 USDC » @Ruhum 
+$44.84 USDC » @djxploit 
+$44.84 USDC » @Natzuu 
+$44.84 USDC » @Sloth 
+$44.84 USDC » @sach1r0 
+$44.84 USDC » @bulej93 
+$44.84 USDC » @Rohan 
+$44.84 USDC » @Yiko 
+$44.84 USDC » @fatherOfBlocks 
+$32.12 USDC » @0x52 
+$30.34 USDC » @Bahurum 
+$30.07 USDC » @RoiEvenHaim 
+$29.89 USDC » @neumo 
+$29.89 USDC » @0xmatt 
+$29.89 USDC » @seyni 
+$29.89 USDC » @p_crypt0 
+$29.89 USDC » @saneryee 
+$29.89 USDC » @Vexjon 
+$29.89 USDC » @PENGUN 
+$29.89 USDC » @Roman 
+$29.89 USDC » 0xsolstars (@Varun_Verma, @masterchief)
+$29.89 USDC » @byndooa 
+$29.89 USDC » sseefried
+$29.89 USDC » @wastewa 
+$17.47 USDC » @m_Rassska 
+$15.07 USDC » @newfork01 
+$15.03 USDC » @Tomio 
+$15.00 USDC » @0xSmartContract 
+$14.96 USDC » @Amithuddar 
+$14.96 USDC » @jag 
+$14.95 USDC » @0X040 
+$14.95 USDC » @Metatron 
+$14.95 USDC » @saian 
+$14.95 USDC » @sashik_eth 
+$14.95 USDC » @3xHarry 
+$14.95 USDC » @2997ms 
+$14.95 USDC » @Ignacio 
+$14.95 USDC » @SooYa 
+$14.95 USDC » @gerdusx 
+$14.95 USDC » @SpaceCake 
+$14.95 USDC » @0xackerman 
+$14.95 USDC » @chrisdior4 
+$14.95 USDC » @CRYP70 
+$14.95 USDC » @Fitraldys 
+$14.95 USDC » @Noam Yakov 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 12 total, 2 unique
+Med risk findings: 41 total, 8 unique
+Gas optimization reports: 93
+QA reports: 93
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations all! 💸 💸 💸
+
+*Note: If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+4739_Skeletor ✅ (6) 
+
+[09/21/2022 1:45 PM] carlitox477
+First contest resul I got, if i don't remember bad it was a week with 3 contest where I participated in all of them. Glad with the results, and firt time I get paid for something as a programmer, I couldn't be more excited 😄
+
+
+[09/21/2022 1:46 PM] carlitox477
+Thank judges for your work! And I expect people from fiat dao are satisfied with the findings
+
+
+[09/21/2022 1:59 PM] scaraven
+Wow $13k, $4500 and then $2000. It doesn't get more extreme then that
+
+{Reactions}
+👏 (6) 
+
+[09/21/2022 2:42 PM] pedr02b2
+wow thank you so much ......my first high bug on my thrid report literally made my month
+
+{Reactions}
+💜 (3) hi5 (2) 
+
+[09/21/2022 5:15 PM] bnke0x0
+https://tenor.com/view/sweating-nervous-wreck-gif-24688521
+
+{Embed}
+https://tenor.com/view/sweating-nervous-wreck-gif-24688521
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/sweating-nervous-BFA64.png
+
+
+[09/21/2022 5:33 PM] ladboy233
+I only made 180 USD, not satisfied.  Will do better next time!
+
+
+[09/21/2022 6:29 PM] SpaceCake#8961
+I've made 14.95$ 🥳 Leeeeeeeeet's fucking goooooOOOO!!!
+
+
+[09/21/2022 6:29 PM] SpaceCake#8961
+rounds are on me
+
+
+[09/21/2022 6:30 PM] codingnamekiki
+https://tenor.com/view/comiss%C3%A3o-gif-26368654
+
+{Embed}
+https://tenor.com/view/comiss%C3%A3o-gif-26368654
+Code4rena - ARCHIVE-Q3-2022 - ☑fiat-dao-aug12 [1006962576049057963].txt_Files/comiss%25C3%25A3o-D5E91.png
+
+{Reactions}
+😂 (3) 
+
+[09/21/2022 9:11 PM] p_crypt0
+Yah this competition was tough it seems
+
+
+[09/21/2022 9:11 PM] p_crypt0
+was convinced I got some mediums too😅
+
+
+[09/21/2022 11:20 PM] carlitox477
+I look forward to reading the report so much to learn from @Respx , @scaraven , @ak1 and certoraInc team findings
+
+{Reactions}
+👍 (3) 
+
+[09/22/2022 1:09 AM] yixxas
+me too, first contest, first medium
+
+
+[09/22/2022 1:09 AM] yixxas
+can't wait to read the report to improve
+
+{Reactions}
+👍 
+
+[10/04/2022 8:35 AM] Deleted User
+Report is out: https://code4rena.com/reports/2022-08-fiatdao
+
+{Embed}
+https://code4rena.com/reports/2022-08-fiatdao
+FIAT DAO veFDT contest
+Hack DeFi. Compete. Get paid.
+
+{Reactions}
+👍 (2) 
+
+[10/04/2022 11:04 AM] Deleted User
+Just wondering why this finding https://github.com/code-423n4/2022-08-fiatdao-findings/issues/172 and similar ones like https://github.com/code-423n4/2022-08-fiatdao-findings/issues/202 where marked as invalid
+
+
+[10/04/2022 11:08 AM] Deleted User
+Realizing that my report wasn't well-written as it was my first contest but I believe that @Respxclearly demonstrates the issue
+
+
+[10/04/2022 11:08 AM] minh___
+its explained in the comments
+
+
+==============================================================
+Exported 105 message(s)
+==============================================================
